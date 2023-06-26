@@ -24,4 +24,6 @@ def home():
 
 if __name__=='__main__':
     My_app.debug = True
-    My_app.run()
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    My_app.run(host='0.0.0.0', port=port)
